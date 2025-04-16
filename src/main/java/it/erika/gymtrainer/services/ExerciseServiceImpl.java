@@ -61,6 +61,7 @@ public class ExerciseServiceImpl implements ExerciseService{
         entity.setDescription(dto.getDescription());
         entity.setMuscleDistrict(dto.getMuscleDistrict());
         entity.setType(dto.getType());
+        repository.save(entity);
     }
 
     @Override
