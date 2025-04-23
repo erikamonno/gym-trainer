@@ -4,3 +4,10 @@ spring:
       host: localhost
       port: 27017
       database: gymTrainerDB
+
+server:
+  port: 8081
+
+microservices:
+  gym-track:
+    url: http://localhost:8080

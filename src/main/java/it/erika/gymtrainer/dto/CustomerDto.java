@@ -3,9 +3,8 @@ package it.erika.gymtrainer.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
-
 import java.time.LocalDate;
+import lombok.Data;
 
 @Data
 public class CustomerDto {
@@ -25,6 +24,5 @@ public class CustomerDto {
     @NotBlank
     private String phone;
 
-    @NotNull
-    private LocalDate birthDate;
+    @NotNull private LocalDate birthDate;
 }

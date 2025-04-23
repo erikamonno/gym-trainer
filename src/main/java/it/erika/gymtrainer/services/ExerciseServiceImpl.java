@@ -5,15 +5,14 @@ import it.erika.gymtrainer.entities.Exercise;
 import it.erika.gymtrainer.exceptions.EntityNotFoundException;
 import it.erika.gymtrainer.mappers.ExerciseMapper;
 import it.erika.gymtrainer.respositories.ExerciseRepository;
+import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Optional;
-import java.util.UUID;
 @Service
-public class ExerciseServiceImpl implements ExerciseService{
+public class ExerciseServiceImpl implements ExerciseService {
 
     private final ExerciseRepository repository;
     private final ExerciseMapper mapper;
@@ -37,7 +36,7 @@ public class ExerciseServiceImpl implements ExerciseService{
     @Override
     public ExerciseDto getExercise(String id) {
         Optional<Exercise> oEntity = repository.findById(id);
-        if(oEntity.isEmpty()) {
+        if (oEntity.isEmpty()) {
             throw new EntityNotFoundException("Exercise not found");
         }
         var entity = oEntity.get();
@@ -53,7 +52,7 @@ public class ExerciseServiceImpl implements ExerciseService{
     @Transactional
     public void updateExercise(String id, ExerciseDto dto) {
         Optional<Exercise> oEntity = repository.findById(id);
-        if(oEntity.isEmpty()) {
+        if (oEntity.isEmpty()) {
             throw new EntityNotFoundException("Exercise not found");
         }
         var entity = oEntity.get();

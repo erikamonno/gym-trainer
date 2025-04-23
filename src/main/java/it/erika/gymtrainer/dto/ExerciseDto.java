@@ -2,8 +2,6 @@ package it.erika.gymtrainer.dto;
 
 import lombok.Data;
 
-import java.util.UUID;
-
 @Data
 public class ExerciseDto {
 
