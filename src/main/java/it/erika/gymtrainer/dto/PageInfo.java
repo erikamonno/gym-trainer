@@ -7,6 +7,6 @@ public class PageInfo {
 
     private Long size;
     private Long number;
-    private Long totalElement;
+    private Long totalElements;
     private Long totalPages;
 }
