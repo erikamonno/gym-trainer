@@ -1,5 +1,6 @@
 package it.erika.gymtrainer.entities;
 
+import it.erika.gymtrainer.dto.ExercisesSheet;
 import java.time.LocalDate;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -21,4 +22,6 @@ public class Customer {
     private String phone;
 
     private LocalDate birthDate;
+
+    private ExercisesSheet exercisesSheet;
 }

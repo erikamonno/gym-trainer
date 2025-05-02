@@ -25,4 +25,6 @@ public class CustomerDto {
     private String phone;
 
     @NotNull private LocalDate birthDate;
+
+    private ExercisesSheet exercisesSheet;
 }
